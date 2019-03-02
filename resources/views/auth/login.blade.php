@@ -1,4 +1,5 @@
 @extends('layouts.template')
+@section('title','Login Admin')
 
 @section('content')
 <div class="container-scroller">
