@@ -26,12 +26,11 @@
         <div class="container-fluid page-body-wrapper">
             @include('layouts.inc-sidebar')
             <div class="main-panel">
-
+                @yield('content')
+                @include('layouts.inc-footer')
             </div>
         </div>
     </div>
-    
-    @yield('content')
     <!-- jQuery -->
     @include('layouts.inc-scripts')
     @yield('scripts')

@@ -9,21 +9,6 @@
           </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
-          <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Schedule
-                <span class="badge badge-primary ml-1">New</span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link">
-                <i class="mdi mdi-elevation-rise"></i>Reports</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
-            </li>
-          </ul>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -137,10 +122,10 @@
             </li>
             <li class="nav-item dropdown d-none d-xl-inline-block">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <span class="profile-text">Hello, Richard V.Welsh !</span>
-                <img class="img-xs rounded-circle" src="{{asset('templateadmin/images/faces/face1.jpg')}}" alt="Profile image">
+                <span style="font-size:1rem;" class="profile-text">สวัสดี, {{Auth::user()->name}} </span>
+                <img class="img-xs rounded-circle" src="{{asset('templateadmin/images/faces-clipart/pic-1.png')}}" alt="Profile image">
               </a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div style="font-size:1rem;" class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <a class="dropdown-item p-0">
                   <div class="d-flex border-bottom">
                     <div class="py-3 px-4 d-flex align-items-center justify-content-center">

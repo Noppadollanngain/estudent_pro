@@ -13,8 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
 Route::get('/home', 'AdminController@indexDashborad')->name('home');
+Route::get('/admin-list','AdminController@adminList')->name('admin-list');
