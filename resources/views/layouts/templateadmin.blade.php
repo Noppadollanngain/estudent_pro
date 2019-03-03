@@ -33,6 +33,7 @@
     </div>
     <!-- jQuery -->
     @include('layouts.inc-scripts')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('scripts')
 </body>
 

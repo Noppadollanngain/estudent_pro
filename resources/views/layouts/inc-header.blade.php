@@ -139,8 +139,8 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item mt-2">
-                  Manage Accounts
+              <a href="{{route('admin-edit',['id'=>Auth::user()->id])}}" class="dropdown-item mt-2">
+                  จัดการบัชชี
                 </a>
                 <a class="dropdown-item">
                   Change Password

@@ -19,3 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'AdminController@indexDashborad')->name('home');
 Route::get('/admin-list','AdminController@adminList')->name('admin-list');
+Route::get('/admin-block','AdminController@adminBlock')->name('admin-block');
+Route::get('/admin-unblock','AdminController@adminUnblock')->name('admin-unblock');
+Route::get('/admin-edit','AdminController@adminEdit')->name('admin-edit');
+
+Route::post('/admin-edit-form','AdminController@adminEditFotm')->name('admin-edit-form');

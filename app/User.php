@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -39,7 +40,17 @@ class User extends Authenticatable
     ];
 
     public function scopeList(){
-        $data = DB::table('users')->select("name","email","created_at")->where('id','!=',1)->orderBy("created_at","DESC");
+        $data = DB::table('users')->select("id","name","email","status","created_at")->where('id','!=',1)->where('id','!=',Auth::user()->id)->orderBy("created_at","DESC");
         return $data;
+    }
+
+    public static function aminEdit($id){
+        $data = DB::table('users')->select("id","name","email")->where('id','=',$id);
+        return $data;
+    }
+
+    public static function adminCheckEmail($id,$email){
+        $count = User::where("email","=",$email)->where("id","!=",$id)->count();
+        return $count;
     }
 }
