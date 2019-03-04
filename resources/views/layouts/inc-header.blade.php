@@ -142,8 +142,8 @@
               <a href="{{route('admin-edit',['id'=>Auth::user()->id])}}" class="dropdown-item mt-2">
                   จัดการบัชชี
                 </a>
-                <a class="dropdown-item">
-                  Change Password
+                <a href="{{route('admin-insertdatabase')}}" class="dropdown-item">
+                  เพิ่มฐานข้อมูล
                 </a>
                 <a class="dropdown-item">
                   Check Inbox

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth; 
+use Excel;
+use App\Students;
 
 class AdminController extends Controller
 {
@@ -16,7 +18,7 @@ class AdminController extends Controller
     private function block(){
         if(Auth::user()->status){
             Auth::logout();
-            abort(404);
+            abort(403);
         }
     }
 
@@ -26,6 +28,7 @@ class AdminController extends Controller
     }
 
     public function adminList(){
+        $this->block();
         $data = User::List()->paginate(20);
         return view('admin-list',[
             'data' => $data
@@ -71,13 +74,14 @@ class AdminController extends Controller
     }
 
     public function adminEdit(Request $request){
+        $this->block();
         $data = User::aminEdit($request->id)->first();
         return view('admin-edit',[
             "data" => $data,
         ]);
     }
     
-    public function adminEditFotm(Request $request){
+    public function adminEditForm(Request $request){
         if($request->id!=1&&(Auth::user()->id==1||Auth::user()->id==$request->id)){
             if($this->adminEditDatabase($request->id,$request->name,$request->email)){
                 session()->flash('msg_success', 'ดำเนินการเส็จสิ้น');
@@ -107,6 +111,42 @@ class AdminController extends Controller
             $data->email = $email;
             $data->save();
             return 1;
+        }
+    }
+
+    public function adminInsertdatabase(){
+        $this->block();
+        return view('admin-insertdatabase');
+    }
+
+    public function adminInsertdatabaseForm(Request $request){
+        if(Auth::user()->id==1){
+            if($request->hasFile('excel')){
+                $path = $request->file('excel')->getRealPath();
+                $data = Excel::load($path)->get();
+                if($data->count()){
+                    foreach ($data as $key => $value) {
+                        $arr[] = ['name' => $value->name,'stdId'=>$value->stdid,'peopleId'=>$value->peopleid,'major'=>$value->major];
+                    }
+                    if(!empty($arr)){
+                        foreach ($arr as $key => $value) {
+                            $data = Students::firstOrNew(['name' => $value['name'],'stdId'=>$value['stdId'],'peopleId'=>$value['peopleId'],'major'=>$value['major']]);
+                            $data->name =  $value['name'];
+                            $data->save();
+                        }
+                        session()->flash('msg_success', 'เพิ่มข้อมูลเสร็จสิ้น');
+                        return redirect()->route('home');
+                    }
+                }
+            }
+            else{
+                session()->flash('msg_error', 'กรุณาเลือก ไฟล์ EXCEL');
+                return back();
+            }
+        }
+        else{
+            session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ ติดเจ้าหน้าที่สูงสุด');
+            return redirect()->route('home');
         }
     }
 }

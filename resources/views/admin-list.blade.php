@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
 @endsection
 @section('scripts')
   @if (session()->has('msg_success'))
