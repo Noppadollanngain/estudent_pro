@@ -23,6 +23,10 @@ Route::get('/admin-block','AdminController@adminBlock')->name('admin-block');
 Route::get('/admin-unblock','AdminController@adminUnblock')->name('admin-unblock');
 Route::get('/admin-edit','AdminController@adminEdit')->name('admin-edit');
 Route::get('/admin-insertdatabase','AdminController@adminInsertdatabase')->name('admin-insertdatabase');
+Route::get('/admin-searchstudent','AdminController@adminSearchstudent')->name('admin-searchstudent');
+Route::get('/student-searchBy','StudentController@searchBy')->name('student-searchBy');
+Route::get('/student-edit','StudentController@studentEdit')->name('student-edit');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');
+Route::post('/student-edit-form','StudentController@studentEditForm')->name('student-edit-form');

@@ -18,6 +18,10 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('stdId')->unique();
             $table->string('peopleId')->unique();
+            $table->integer('whoIsupdate')->unsigned()->nullable();
+            $table->foreign('whoIsupdate')
+                ->references('id')
+                ->on('users');
             $table->text('major');
             $table->timestamps();
         });

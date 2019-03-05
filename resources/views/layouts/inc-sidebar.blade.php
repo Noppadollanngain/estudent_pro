@@ -24,7 +24,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-content-copy"></i>
+              <i class="menu-icon mdi mdi-pen"></i>
               <span style="font-size:1rem;" class="menu-title">จัดการเจ้าหน้าที่</span>
               <i class="menu-arrow"></i>
             </a>
@@ -40,9 +40,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <i class="menu-icon mdi mdi-backup-restore"></i>
-              <span style="font-size:1rem;" class="menu-title">Form elements</span>
+            <a class="nav-link" href="{{route('admin-searchstudent')}}">
+              <i class="menu-icon mdi mdi-account-circle"></i>
+              <span style="font-size:1rem;" class="menu-title">ค้นหานักศึกษา</span>
             </a>
           </li>
           <li class="nav-item">

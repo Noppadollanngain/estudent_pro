@@ -29,7 +29,7 @@ class AdminController extends Controller
 
     public function adminList(){
         $this->block();
-        $data = User::List()->paginate(20);
+        $data = User::List()->paginate(10);
         return view('admin-list',[
             'data' => $data
         ]);
@@ -153,5 +153,10 @@ class AdminController extends Controller
         $data->name =  $name;
         $data->major = $major;
         $data->save();
+    }
+
+    public function adminSearchstudent(){
+        $this->block();
+        return view('admin-searchstudent');
     }
 }
