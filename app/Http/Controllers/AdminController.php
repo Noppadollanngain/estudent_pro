@@ -130,9 +130,7 @@ class AdminController extends Controller
                     }
                     if(!empty($arr)){
                         foreach ($arr as $key => $value) {
-                            $data = Students::firstOrNew(['name' => $value['name'],'stdId'=>$value['stdId'],'peopleId'=>$value['peopleId'],'major'=>$value['major']]);
-                            $data->name =  $value['name'];
-                            $data->save();
+                           $this->firstOrNewDatabase($value['name'],$value['stdId'],$value['peopleId'],$value['major']);
                         }
                         session()->flash('msg_success', 'เพิ่มข้อมูลเสร็จสิ้น');
                         return redirect()->route('home');
@@ -148,5 +146,12 @@ class AdminController extends Controller
             session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ ติดเจ้าหน้าที่สูงสุด');
             return redirect()->route('home');
         }
+    }
+
+    private function firstOrNewDatabase($name,$stdId,$peopleId,$major){
+        $data = Students::firstOrNew(['stdId'=>$stdId,'peopleId'=>$peopleId]);
+        $data->name =  $name;
+        $data->major = $major;
+        $data->save();
     }
 }
