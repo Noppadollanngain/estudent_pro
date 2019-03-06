@@ -26,7 +26,14 @@ Route::get('/admin-insertdatabase','AdminController@adminInsertdatabase')->name(
 Route::get('/admin-searchstudent','AdminController@adminSearchstudent')->name('admin-searchstudent');
 Route::get('/student-searchBy','StudentController@searchBy')->name('student-searchBy');
 Route::get('/student-edit','StudentController@studentEdit')->name('student-edit');
+Route::get('/admin-searchdocument','AdminController@adminSearchdocument')->name('admin-searchdocument');
+Route::get('document-searchBy','DocumentController@searchBy')->name('document-searchBy');
+Route::get('/document-edit','DocumentController@documentEdit')->name('document-edit');
+Route::get('/document-edit-confrim','DocumentController@documentEditconfrim')->name('document-edit-confrim');
+Route::get('/document-create','DocumentController@documentCreate')->name('document-create');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');
 Route::post('/student-edit-form','StudentController@studentEditForm')->name('student-edit-form');
+Route::post('/document-edit-form','DocumentController@documentEditForm')->name('document-edit-form');
+Route::post('/document-create-form','DocumentController@documentCreateForm')->name('document-create-form');

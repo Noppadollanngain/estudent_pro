@@ -159,4 +159,9 @@ class AdminController extends Controller
         $this->block();
         return view('admin-searchstudent');
     }
+
+    public function adminSearchdocument(){
+        $this->block();
+        return view('admin-searchdocument');
+    }
 }

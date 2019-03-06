@@ -46,9 +46,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-              <i class="menu-icon mdi mdi-chart-line"></i>
-              <span style="font-size:1rem;" class="menu-title">Charts</span>
+            <a class="nav-link" href="{{route('admin-searchdocument')}}">
+              <i class="menu-icon mdi mdi-clipboard-text"></i>
+              <span style="font-size:1rem;" class="menu-title">จัดการรับเอกสาร</span>
             </a>
           </li>
           <li class="nav-item">

@@ -3,6 +3,7 @@
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json");
     $request_body = file_get_contents('php://input');
+    file_put_contents('log/logs', $request_body.PHP_EOL, FILE_APPEND);
     $data = json_decode($request_body,true);
     $query_1 = "SELECT COUNT(`stdId`) FROM `students` WHERE `stdId` = '".$data['username']."'";
     $result_1 = mysqli_fetch_array(mysqli_query($con,$query_1));
@@ -14,6 +15,10 @@
         if( $result_2[0]==0){
             exit(json_encode(['state'=>0, 'msg'=>'erro']));
         }else{
-            exit(json_encode(['state'=>1, 'data'=>['uid'=>1,'username'=>'name']]));
+            $data_show = 'SELECT * FROM `students` WHERE `stdId` = "'.$data['username'].'" AND `peopleId` = "'.$data['password'].'"';
+            $reusult_test = mysqli_query($con,$data_show);
+            $result_show = mysqli_fetch_assoc($reusult_test);
+            $result_show['state'] = 1;
+            exit(json_encode($result_show));
         }
     }

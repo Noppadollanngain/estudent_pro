@@ -27,8 +27,13 @@ class Students extends Model
     public static function oneStudent($id){
         $data = DB::table('students')
                     ->leftJoin('users', 'students.whoIsupdate', '=', 'users.id')
-                    ->select('students.name','students.stdId','students.peopleId','students.major','students.id','users.name as whoIsupdatename','students.updated_at','students.whoIsupdate')
+                    ->select('students.name','students.stdId','students.peopleId','students.major','students.id','users.name as whoIsupdatename','students.updated_at','students.whoIsupdate','students.notification_token')
                     ->where('students.id','=',$id);
+        return $data;
+    }
+
+    public static function listoneStudent($id){
+        $data = DB::table('students')->select('name','stdId','peopleId','id')->where('id','=',$id);
         return $data;
     }
 }

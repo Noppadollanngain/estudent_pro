@@ -22,6 +22,8 @@ class CreateStudentsTable extends Migration
             $table->foreign('whoIsupdate')
                 ->references('id')
                 ->on('users');
+            $table->boolean('loginstatus')->default(0);
+            $table->string('notification_token')->unique()->nullable();
             $table->text('major');
             $table->timestamps();
         });
