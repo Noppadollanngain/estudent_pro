@@ -52,16 +52,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <i class="menu-icon mdi mdi-table"></i>
-              <span style="font-size:1rem;" class="menu-title">Tables</span>
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic2">
+              <i class="menu-icon mdi mdi-apple-mobileme"></i>
+              <span style="font-size:1rem;" class="menu-title">จัดการข่าวสาร</span>
+              <i class="menu-arrow"></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
-              <i class="menu-icon mdi mdi-sticker"></i>
-              <span style="font-size:1rem;" class="menu-title">Icons</span>
-            </a>
+            <div class="collapse" id="ui-basic2">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                <a style="font-size:1rem;" class="nav-link" href="{{route('new-create')}}">เพิ่มข่าวใหม่</a>
+                </li>
+                <li class="nav-item">
+                  <a style="font-size:1rem;" class="nav-link" href="#">แก้ไข & แจ้งข่าว</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
     </nav>

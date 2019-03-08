@@ -31,6 +31,7 @@ Route::get('document-searchBy','DocumentController@searchBy')->name('document-se
 Route::get('/document-edit','DocumentController@documentEdit')->name('document-edit');
 Route::get('/document-edit-confrim','DocumentController@documentEditconfrim')->name('document-edit-confrim');
 Route::get('/document-create','DocumentController@documentCreate')->name('document-create');
+Route::get('new-create','NewsController@createNew')->name('new-create');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');
