@@ -20,13 +20,13 @@ class DatabaseSeeder extends Seeder
         $admin->save();
 
         $type1 = new Typestudents();
-        $type1->name = "กูยืมรายใหม่";
+        $type1->name = "กู้ยืมรายใหม่";
         $type1->save();
         $type2 = new Typestudents();
-        $type2->name = "กูยืมรายเก่าเลื่อนชั้นปี";
+        $type2->name = "กู้ยืมรายเก่าเลื่อนชั้นปี";
         $type2->save();
         $type3 = new Typestudents();
-        $type3->name = "กูยืมรายเก่า";
+        $type3->name = "กู้ยืมรายเก่า";
         $type3->save();
         $type4 = new Typestudents();
         $type4->name = "ยกเลิกจากระบบ";

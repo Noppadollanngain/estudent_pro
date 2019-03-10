@@ -36,7 +36,7 @@
                     <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" value="{{$data->notification_token}}" name="notification_token" disabled>
                   </div>
                   <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
-                <a href="{{route('admin-searchstudent')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้าหลัก</a>
+                  <a href="{{route('admin-searchstudent')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้าหลัก</a>
                 {{ Form::close() }}
               </div>
             </div>

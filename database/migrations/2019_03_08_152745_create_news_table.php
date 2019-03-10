@@ -15,10 +15,10 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('heade');
+            $table->string('head');
             $table->text('body')->nullable();
-            $table->string('image');
-            $table->string('link');
+            $table->string('image')->unique();
+            $table->string('linkdownload')->nullable();
             $table->integer('typestudent')->unsigned();
             $table->foreign('typestudent')
                 ->references('id')
@@ -35,9 +35,8 @@ class CreateNewsTable extends Migration
             $table->foreign('adminsend')
                 ->references('id')
                 ->on('users');
-            $table->timestamp('create_add')->nullable();
-            $table->timestamp('update_add')->nullable();
             $table->timestamp('send_add')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -1,6 +1,15 @@
 @extends('layouts.templateadmin')
-@section('title','Create New')
-
+@section('title','Edit New')
+@section('stylesheet')
+    <style>
+        .image-new{
+            height: 300px;
+            width: 300px;
+            border-radius: 3px;
+            margin-left: 32%;
+        }
+    </style>
+@endsection
 @section('content')
 <div class="content-wrapper">
   <div class="row">
@@ -9,17 +18,24 @@
         <div class="col-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">สร้างข่าวใหม่</h4>
-              <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
-                แบบฟอร์มสำหรับเพิ่มข่าว
+                    <h4 class="card-title row">
+                        <p style="font-size:1.25rem;font-family: 'Athiti', sans-serif;" class="col-4">แก้ไขข่าว </p>
+                        @if ($data->adminsend)
+                        <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-8 text-right"> <span style="color:green">แจ้งข้อความข่าวล่าสุด โดย {{$data->whosend}} เวลายืนยัน {{$data->send_add}}</span></p>
+                        @endif
+                    </h4>
+              <img class="image-new" src="{{asset('/images/News/'.$data->image)}}" alt="">
+              <p style="font-size:1rem;font-family: 'Athiti', sans-serif;margin-top:15px;" class="card-description">
+                แบบฟอร์มสำหรับแก้ไขข่าว <span style="color:red"> สร้างโดย {{$data->whocreate}} เวลา {{$data->created_at}}</span>
               </p>
-              {{ Form::open(array('route'=>'new-create-form','files'=>true))}}
+              {{ Form::open(array('route'=>'new-edit-form','files'=>true))}}
+                <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">หัวข้อข่าว</label>
                       <div class="col-sm-8">
-                      <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" name="head" placeholder="เพิ่มหัวข้อข่าว" value="{{session()->get('head')}}">
+                      <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" name="head" placeholder="เพิ่มหัวข้อข่าว" value="{{$data->head}}">
                       </div>
                     </div>
                   </div>
@@ -30,7 +46,7 @@
                         <select class="form-control" style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="typestudent">
                           <option value="0">เลือกประเภท</option>
                           @foreach ($typestudent as $type)
-                            <option @if (session()->get('typestudent')==$type->id)
+                            <option @if ($data->typestudent==$type->id)
                               selected=""
                              @endif value="{{$type->id}}">{{$type->name}}</option>
                           @endforeach
@@ -42,7 +58,7 @@
                     <div class="form-group row">
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">ข้อความข่าว</label>
                       <div class="col-sm-8">
-                        <textarea style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="body" class="form-control" id="exampleTextarea1" rows="15"></textarea>
+                      <textarea style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="body" class="form-control" id="exampleTextarea1" rows="15">{{$data->body}}</textarea>
                       </div>
                     </div>
                   </div>
@@ -50,7 +66,7 @@
                     <div class="form-group row">
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">ลิ้งค์ดาวน์โหลด</label>
                       <div class="col-sm-8">
-                        <input name="link" style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" placeholder="url สำหรับโหลดเอกสาร">
+                      <input name="link" style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" placeholder="url สำหรับโหลดเอกสาร" value="{{$data->linkdownload}}">
                       </div>
                     </div>
                   </div>
@@ -58,13 +74,17 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">รูปภาพ</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-4">
                       <input name="image" type="file" accept=".jpg,.png">
                     </div>
                   </div>
                 </div>
+                @if ($data->whoupdate)
+                  <p style="font-size:1rem;color:green">แก้ไขล่าสุดโดย {{$data->whoupdate}} เวลา {{$data->updated_at}}</p>
+                @endif
                 <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
                 <a href="{{route('home')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้าหลัก</a>
+                <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info">แจ้งข่าวสาร</a>
               {{Form::close()}}
             </div>
           </div>

@@ -31,10 +31,15 @@ Route::get('document-searchBy','DocumentController@searchBy')->name('document-se
 Route::get('/document-edit','DocumentController@documentEdit')->name('document-edit');
 Route::get('/document-edit-confrim','DocumentController@documentEditconfrim')->name('document-edit-confrim');
 Route::get('/document-create','DocumentController@documentCreate')->name('document-create');
-Route::get('new-create','NewsController@createNew')->name('new-create');
+Route::get('/new-create','NewsController@createNew')->name('new-create');
+Route::get('/new-list','NewsController@listNews')->name('new-list');
+Route::get('/new-edit','NewsController@newEdit')->name('new-edit');
+Route::get('/new-send','NewsController@sendNew')->name('new-send');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');
 Route::post('/student-edit-form','StudentController@studentEditForm')->name('student-edit-form');
 Route::post('/document-edit-form','DocumentController@documentEditForm')->name('document-edit-form');
 Route::post('/document-create-form','DocumentController@documentCreateForm')->name('document-create-form');
+Route::post('/news-create-form','NewsController@createNewform')->name('new-create-form');
+Route::post('/new-edit-form','NewsController@newEditform')->name('new-edit-form');

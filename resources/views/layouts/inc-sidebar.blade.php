@@ -63,7 +63,7 @@
                 <a style="font-size:1rem;" class="nav-link" href="{{route('new-create')}}">เพิ่มข่าวใหม่</a>
                 </li>
                 <li class="nav-item">
-                  <a style="font-size:1rem;" class="nav-link" href="#">แก้ไข & แจ้งข่าว</a>
+                  <a style="font-size:1rem;" class="nav-link" href="{{route('new-list')}}">แก้ไข & แจ้งข่าว</a>
                 </li>
               </ul>
             </div>
