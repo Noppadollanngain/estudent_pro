@@ -81,7 +81,6 @@
                             <select @if (Auth::user()->id!=1)
                                     disabled
                             @endif  name="typestudent" style="font-size:1.05rem;font-family: 'Athiti', sans-serif;" class="form-control">
-                                 <option value="null">เลือกประเภท</option>
                                 @foreach ($typestudent as $type)
                                  <option @if ($type->id==$data->typestudent)
                                      selected=""

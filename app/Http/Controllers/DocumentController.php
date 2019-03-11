@@ -185,7 +185,7 @@ class DocumentController extends Controller
             }
            
         }else{
-            session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ กรุณาลองอีกครั้ง');
+            session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ กรุณาเลือกประเภท');
             return back();
         }
        }

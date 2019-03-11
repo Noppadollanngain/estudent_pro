@@ -8,6 +8,7 @@ use Auth;
 use App\News;
 use Image;
 use File;
+use DB;
 
 class NewsController extends Controller
 {
@@ -130,6 +131,7 @@ class NewsController extends Controller
         $data->adminsend = Auth::user()->id;
         $data->send_add = now();
         if($this->createNewdatabase($data)){
+            $this->sendNoti($data->head,$data->body,$data->typestudent);
             session()->flash('msg_success', 'ดำเนินการเส็จสิ้น');
             return redirect()->route('new-edit',[
                 'id' => $data->id
@@ -140,7 +142,23 @@ class NewsController extends Controller
         }
     }
 
-    private function sendNoti(){
-
+    private function sendNoti($head,$body,$typestudent){
+        $data = News::getNoti($typestudent)->get();
+        $title = $head;
+        $body = $body;
+        foreach($data as $send_data){
+            header("Access-Control-Allow-Origin: *");
+            header("Content-Type: application/json");
+            $ch = curl_init("https://expo.io/--/api/v2/push/send");
+            # Setup request to send json via POST.
+            $payload = json_encode( array( "to"=> $send_data->notification_token, "body"=>(string)$body, "title"=>(string)$title) );
+            curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
+            curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+            # Return response instead of printing.
+            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+            # Send request.
+            $result = curl_exec($ch);
+            curl_close($ch);
+        }
     }
 }

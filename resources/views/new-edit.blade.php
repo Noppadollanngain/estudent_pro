@@ -44,7 +44,6 @@
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">ประเภทนักศึกษาที่แจ้ง</label>
                       <div class="col-sm-8">
                         <select class="form-control" style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="typestudent">
-                          <option value="0">เลือกประเภท</option>
                           @foreach ($typestudent as $type)
                             <option @if ($data->typestudent==$type->id)
                               selected=""

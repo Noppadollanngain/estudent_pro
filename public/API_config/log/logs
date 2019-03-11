@@ -1,84 +1,219 @@
-{"username":"59544401061-4","password":"1509970034069"}
-{}
-{"NotiToken":""}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{}
-{"id":1,"NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
-{"id":1,"NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
-{"NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
 {"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
 {"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
 {"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
-{"id":1,"NotiToken":""}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
 {"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
+{"id":"1"}
 {"id":"1"}
 {"username":"59544401061-4","password":"1509970034069"}
-{"id":1,"NotiToken":""}
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1
 {"id":"1"}
-{"username":"59544401061-4","password":"1509970034069"}
-{"id":"1","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-{"id":1,"NotiToken":""}
-{"id":"1"}
-{"id":"1"}
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-{"id":1,"NotiToken":""}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-{"id":"2","NotiToken":""}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-{"id":"2","NotiToken":""}
-{"id":"2"}
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-{"id":"2","NotiToken":""}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2","NotiToken":""}
-UPDATE `students` SET `notification_token`=  '' WHERE `id` = 2
-{"id":"2"}
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2","NotiToken":""}
-UPDATE `students` SET `notification_token`=  null WHERE `id` = 2
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2"}
-{"username":"61543304006-5","password":"1509960011996"}
-{}
-{"id":"2"}
-UPDATE `students` SET `notification_token`=  null WHERE `id` = 2
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2","NotiToken":""}
-UPDATE `students` SET `notification_token`=  null WHERE `id` = 2
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2"}
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2"}
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"username":"61543304006-5","password":"1509960011996"}
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
-{"id":"2","NotiToken":"ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]"}
-UPDATE `students` SET `notification_token`=  'ExponentPushToken[HPvDB5MmySS8FIujaZXxlj]' WHERE `id` = 2
+{"id":"1","NotiToken":"ExponentPushToken[irvvHpEteB3_kd2GoepkAG]"}
+UPDATE `students` SET `notification_token`=  'ExponentPushToken[irvvHpEteB3_kd2GoepkAG]' WHERE `id` = 1

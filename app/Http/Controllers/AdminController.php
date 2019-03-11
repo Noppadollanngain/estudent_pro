@@ -7,6 +7,7 @@ use App\User;
 use Auth; 
 use Excel;
 use App\Students;
+use App\Documents;
 
 class AdminController extends Controller
 {
@@ -24,7 +25,22 @@ class AdminController extends Controller
 
     public function indexDashborad(){
         $this->block();
-        return view('index');
+        $count_student = Students::count();
+        $count_document = Documents::where('typestudent','!=',4)->count();
+        $count_success = Documents::where('confrim','!=',0)->where('typestudent','!=',4)->count();
+        $count_error = Documents::where('confrim','=',0)->where('typestudent','!=',4)->count();
+        $count_type1 = Documents::where('typestudent','=',1)->count();
+        $count_type2 = Documents::where('typestudent','=',2)->count();
+        $count_type3 = Documents::where('typestudent','=',3)->count();
+        return view('index',[
+            'count_student' => $count_student,
+            'count_document' => $count_document,
+            'count_success' => $count_success,
+            'count_error' => $count_error,
+            'count_type1' => $count_type1,
+            'count_type2' => $count_type2,
+            'count_type3' => $count_type3
+        ]);
     }
 
     public function adminList(){

@@ -23,4 +23,9 @@ class News extends Model
                     ->where('news.id','=',$id)->get();
         return $data;
     }
+
+    public static function getNoti($typestudent){
+        $data = DB::table('documents')->join('students','documents.student','=','students.id')->select('students.notification_token')->where('typestudent','=',$typestudent)->where('students.notification_token','!=',null)->where('documents.typestudent','=',$typestudent);
+        return $data;
+    }
 }
