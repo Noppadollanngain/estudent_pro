@@ -67,7 +67,9 @@
                             <select name="typestudent" style="font-size:1.05rem;font-family: 'Athiti', sans-serif;" class="form-control">
                                  <option value="">เลือกประเภท</option>
                                 @foreach ($typestudent as $type)
-                                 <option value="{{$type->id}}">{{$type->name}}</option>
+                                  @if ($type->id!=4)
+                                      <option value="{{$type->id}}">{{$type->name}}</option>
+                                  @endif
                                 @endforeach
                             </select>
                         </div>

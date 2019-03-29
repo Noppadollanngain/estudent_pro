@@ -35,6 +35,10 @@ Route::get('/new-create','NewsController@createNew')->name('new-create');
 Route::get('/new-list','NewsController@listNews')->name('new-list');
 Route::get('/new-edit','NewsController@newEdit')->name('new-edit');
 Route::get('/new-send','NewsController@sendNew')->name('new-send');
+Route::get('/any-function','AnyFunctionController@index')->name('any');
+Route::get('/alert-doc','AnyFunctionController@alert_doc')->name('any-alertdoc');
+Route::get('/reset-doc','AnyFunctionController@resetDoc')->name('any-reset');
+Route::get('/update-doc','AnyFunctionController@updateType')->name('any-update');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');

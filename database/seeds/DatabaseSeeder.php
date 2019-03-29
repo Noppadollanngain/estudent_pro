@@ -29,7 +29,10 @@ class DatabaseSeeder extends Seeder
         $type3->name = "กู้ยืมรายเก่า";
         $type3->save();
         $type4 = new Typestudents();
-        $type4->name = "ยกเลิกจากระบบ";
+        $type4->name = "ทั้งหมด";
         $type4->save();
+        $type5 = new Typestudents();
+        $type5->name = "ยกเลิกจากระบบ";
+        $type5->save();
     }
 }

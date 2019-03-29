@@ -114,30 +114,48 @@
                 <div class="wrapper">
                   <div class="d-flex justify-content-between">
                     <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายใหม่ จำนวน {{number_format($count_type1)}}</p>
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-primary">{{number_format(($count_type1/$count_document)*100,2)}}%</p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-primary">@if ($count_type1)
+                      {{number_format(($count_type1/$count_document)*100,2)}}%
+                    @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{($count_type1/$count_document)*100}}%" aria-valuenow="{{($count_type1/$count_document)*100}}"
+                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type1)
+                    {{number_format(($count_type1/$count_document)*100,2)}}
+                  @endif%" aria-valuenow="@if ($count_type1)
+                      {{number_format(($count_type1/$count_document)*100,2)}}
+                    @endif"
                       aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="wrapper mt-4">
                   <div class="d-flex justify-content-between">
                     <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายใหม่เลื่อนชั้นปี จำนวน {{number_format($count_type2)}}</p>
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">{{number_format(($count_type2/$count_document)*100,2)}}%</p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">@if ($count_type2)
+                      {{number_format(($count_type2/$count_document)*100,2)}}%
+                    @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{($count_type2/$count_document)*100}}%" aria-valuenow="{{($count_type2/$count_document)*100}}"
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type2)
+                    {{number_format(($count_type2/$count_document)*100,2)}}
+                  @endif %" aria-valuenow="@if ($count_type2)
+                      {{number_format(($count_type2/$count_document)*100,2)}}
+                    @endif "
                       aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="wrapper mt-4">
                   <div class="d-flex justify-content-between">
                     <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายเก่า จำนวน {{number_format($count_type3)}}</p>
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">{{number_format(($count_type3/$count_document)*100,2)}}%</p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">@if ($count_type3)
+                      {{number_format(($count_type3/$count_document)*100,2)}}%
+                    @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{($count_type3/$count_document)*100}}%" aria-valuenow="{{($count_type3/$count_document)*100}}"
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type3)
+                    {{number_format(($count_type3/$count_document)*100,2)}}
+                  @endif%" aria-valuenow="@if ($count_type3)
+                      {{number_format(($count_type3/$count_document)*100,2)}}
+                    @endif "
                       aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>

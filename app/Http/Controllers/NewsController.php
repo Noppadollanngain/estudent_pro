@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Typestudents;
 use Auth;
+use App\Students;
 use App\News;
 use Image;
 use File;
@@ -40,6 +41,7 @@ class NewsController extends Controller
                     $data->head = $request->head;
                     $data->typestudent = $request->typestudent;
                     $data->body = $request->body;
+                    $data->title = $request->title;
                     $data->linkdownload = $request->link;
                     $filename = str_random(10) . '_450x450.' . $request->file('image')->getClientOriginalExtension();
                     $data->image = $filename;
@@ -56,17 +58,20 @@ class NewsController extends Controller
                 }
                 else{
                     session()->flash('head', $request->head);
+                    session()->flash('title', $request->title);
                     session()->flash('typestudent', $request->typestudent);
                     session()->flash('msg_error', 'ระบุเลือกรูปภาพ');
                     return back();
                 }
             }else{
+                session()->flash('title', $request->title);
                 session()->flash('head', $request->head);
                 session()->flash('msg_error', 'ระบุประเภทนักศึกษา');
                 return back();
             }
         }else{
             session()->flash('msg_error', 'ระบุข้อหัวข้อข่าว');
+            session()->flash('title', $request->title);
             return back();
         }
     }
@@ -95,6 +100,7 @@ class NewsController extends Controller
     public function newEditform(Request $request){
         $data = News::find($request->id);
         $data->head = $request->head;
+        $data->title = $request->title;
         $data->typestudent = $request->typestudent;
         $data->body = $request->body;
         $data->linkdownload = $request->link;
@@ -143,22 +149,44 @@ class NewsController extends Controller
     }
 
     private function sendNoti($head,$body,$typestudent){
-        $data = News::getNoti($typestudent)->get();
-        $title = $head;
-        $body = $body;
-        foreach($data as $send_data){
-            header("Access-Control-Allow-Origin: *");
-            header("Content-Type: application/json");
-            $ch = curl_init("https://expo.io/--/api/v2/push/send");
-            # Setup request to send json via POST.
-            $payload = json_encode( array( "to"=> $send_data->notification_token, "body"=>(string)$body, "title"=>(string)$title) );
-            curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
-            curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-            # Return response instead of printing.
-            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-            # Send request.
-            $result = curl_exec($ch);
-            curl_close($ch);
+
+        if($typestudent!=4){
+            $data = News::getNoti($typestudent)->get();
+            $title = $head;
+            $body = $body;
+            foreach($data as $send_data){
+                header("Access-Control-Allow-Origin: *");
+                header("Content-Type: application/json");
+                $ch = curl_init("https://expo.io/--/api/v2/push/send");
+                # Setup request to send json via POST.
+                $payload = json_encode( array( "to"=> $send_data->notification_token, "body"=>(string)$body, "title"=>(string)$title) );
+                curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
+                curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+                # Return response instead of printing.
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+                # Send request.
+                $result = curl_exec($ch);
+                curl_close($ch);
+            }
+        }else{
+            $data = Students::all();
+            $title = $head;
+            $body = $body;
+            foreach($data as $send_data){
+                header("Access-Control-Allow-Origin: *");
+                header("Content-Type: application/json");
+                $ch = curl_init("https://expo.io/--/api/v2/push/send");
+                # Setup request to send json via POST.
+                $payload = json_encode( array( "to"=> $send_data->notification_token, "body"=>(string)$body, "title"=>(string)$title) );
+                curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
+                curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+                # Return response instead of printing.
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+                # Send request.
+                $result = curl_exec($ch);
+                curl_close($ch);
+            }
         }
+        
     }
 }

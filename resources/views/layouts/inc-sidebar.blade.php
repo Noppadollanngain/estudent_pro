@@ -68,5 +68,11 @@
               </ul>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('any')}}">
+              <i class="menu-icon mdi mdi-web"></i>
+              <span style="font-size:1rem;" class="menu-title">อื่นๆ</span>
+            </a>
+          </li>
         </ul>
     </nav>

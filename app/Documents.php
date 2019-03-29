@@ -52,4 +52,29 @@ class Documents extends Model
             ->where('documents.student', '=' , $id);
         return $data;
     }
+
+    public static function updateAll(){
+        DB::table('documents')->update(array(
+            'confrim' => 0,
+            'doc1' => 0,
+            'doc2' => 0,
+            'doc3' => 0,
+            'added_doc1' => null,
+            'added_doc2' => null,
+            'added_doc3' => null,
+            'added_confrim' => null,
+            'whoIsget1' => null,
+            'whoIsget2' => null,
+            'whoIsget3' => null,
+            'whoIsconfrim' => null,
+        ));
+    }
+
+    public static function updateType(){
+        $data = DB::table('documents')->orWhere('typestudent','=',1)->orWhere('typestudent','=',2)->update(
+            array(
+                'typestudent' => 3
+            )
+        );
+    }
 }

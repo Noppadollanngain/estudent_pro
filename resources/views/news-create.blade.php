@@ -25,6 +25,14 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group row">
+                      <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">รายระเอียดย่อย</label>
+                      <div class="col-sm-8">
+                      <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" name="title" placeholder="รายระเอียดย่อย" value="{{session()->get('title')}}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">ประเภทนักศึกษาที่แจ้ง</label>
                       <div class="col-sm-8">
                         <select class="form-control" style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="typestudent">

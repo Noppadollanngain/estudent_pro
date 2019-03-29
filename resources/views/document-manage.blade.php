@@ -82,9 +82,11 @@
                                     disabled
                             @endif  name="typestudent" style="font-size:1.05rem;font-family: 'Athiti', sans-serif;" class="form-control">
                                 @foreach ($typestudent as $type)
+                                @if ($type->id!=4)
                                  <option @if ($type->id==$data->typestudent)
                                      selected=""
                                  @endif value="{{$type->id}}">{{$type->name}}</option>
+                                @endif
                                 @endforeach
                             </select>
                         </div>

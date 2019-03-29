@@ -41,6 +41,14 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group row">
+                      <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">รายระเอียดย่อย</label>
+                      <div class="col-sm-8">
+                      <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="text" class="form-control" name="title" placeholder="รายระเอียดย่อย" value="{{$data->title}}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
                       <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-sm-2 col-form-label text-right">ประเภทนักศึกษาที่แจ้ง</label>
                       <div class="col-sm-8">
                         <select class="form-control" style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="typestudent">
@@ -81,9 +89,16 @@
                 @if ($data->whoupdate)
                   <p style="font-size:1rem;color:green">แก้ไขล่าสุดโดย {{$data->whoupdate}} เวลา {{$data->updated_at}}</p>
                 @endif
-                <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
-                <a href="{{route('home')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้าหลัก</a>
-                <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info">แจ้งข่าวสาร</a>
+                @if ($data->whosend)
+                <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="reset" class="btn btn-success mr-2 disabled">บันทึกข้อมูล</button>
+                @else
+                  <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
+                @endif 
+                
+                <a href="{{route('new-list')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้ารายการ</a>
+                <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info  @if ($data->whosend)
+                    disabled
+                  @endif ">แจ้งข่าวสาร</a>
               {{Form::close()}}
             </div>
           </div>
