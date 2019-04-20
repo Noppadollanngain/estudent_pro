@@ -23,6 +23,7 @@
             $data_show = "select * from documents join students on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password'].'"';
             $reusult_test = mysqli_query($con,$data_show);
             $result_show = mysqli_fetch_assoc($reusult_test);
+            echo $data_show;
 
             if($result_show['loginstatus']){
                 exit(json_encode(['state'=>0, 'msg'=>'login already']));
