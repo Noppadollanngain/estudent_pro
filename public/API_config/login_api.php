@@ -5,7 +5,6 @@
     $request_body = file_get_contents('php://input');
     file_put_contents('log/logs', $request_body.PHP_EOL, FILE_APPEND);
     $data = json_decode($request_body,true);
-    
     $data['username'] = '59544401061-4';
     $data['password'] = '1509970034069';
     
