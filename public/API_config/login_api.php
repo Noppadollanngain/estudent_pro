@@ -12,7 +12,7 @@
     $query_1 = "SELECT COUNT(`stdId`) FROM `students` WHERE `stdId` = '".$data['username']."'";
     $result_1 = mysqli_fetch_array(mysqli_query($con,$query_1));
 
-    echo $query_1;
+    echo $result_1;
 
     if( $result_1[0] == 0){
         exit(json_encode(['state'=>0, 'msg'=> 'miss']));
