@@ -23,7 +23,7 @@
             $data_show = $data_show = 'SELECT students.*,documents.typestudent FROM `students` LEFT JOIN `documents` ON students.id = documents.student WHERE `stdId` = "'.$data['username'].'" AND `peopleId` = "'.$data['password'].'"';
             $reusult_test = mysqli_query($con,$data_show);
             $result_show = mysqli_fetch_assoc($reusult_test);
-            echo $data_show;
+//             echo $data_show;
 
             if($result_show['loginstatus']){
                 exit(json_encode(['state'=>0, 'msg'=>'login already']));
