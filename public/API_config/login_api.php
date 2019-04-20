@@ -26,7 +26,8 @@
             echo $data_show;
 
             if($result_show['loginstatus']){
-                exit(json_encode(['state'=>0, 'msg'=>'login already']));
+//                 exit(json_encode(['state'=>0, 'msg'=>'login already']));
+                exit(json_encode($result_show));
             }else{
                 $update_status = 'UPDATE `students` SET `loginstatus`=  1 WHERE `stdId` = "'.$data['username'].'" AND `peopleId` = "'.$data['password'].'"';
                 mysqli_query($con,$update_status);
