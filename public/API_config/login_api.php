@@ -20,7 +20,7 @@
         if( $result_2[0]==0){
             exit(json_encode(['state'=>0, 'msg'=>'erro']));
         }else{
-            $data_show = "select * from students documents left joindocuments on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password']."'";
+            $data_show = "select * from students documents left join documents on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password']."'";
             $reusult_test = mysqli_query($con,$data_show);
             $result_show = mysqli_fetch_assoc($reusult_test);
             echo $data_show;
