@@ -9,6 +9,7 @@
     $array = array();
     if($data['type']){
         $query = "SELECT `id`,`head`,`image`,`send_add`,`title` FROM `news` WHERE `send_add` > 0 AND `typestudent` = ".$data['type']." OR `typestudent` = 4 ORDER BY `news`.`send_add` DESC LIMIT 10";
+        echo $query;
         $reusult_test = mysqli_query($con,$query);
         while($row = mysqli_fetch_assoc($reusult_test)){
             array_push($array,$row);
