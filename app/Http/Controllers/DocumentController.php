@@ -131,7 +131,9 @@ class DocumentController extends Controller
        }
        if($this->documentEditFormdatabase($data)){
             session()->flash('msg_success', 'บันทึกข้อมูลเสร็จสิ้น');
-            return back();
+            return redirect()->route('document-edit',[
+                    'id' => $request->id
+                ]); 
         }else{
             session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ กรุณาลองอีครั้ง');
             return back();
