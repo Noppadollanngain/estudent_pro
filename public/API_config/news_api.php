@@ -8,6 +8,9 @@
 //     $data['type']=1;
     $array = array();
     if($data['type']){
+        if( $data['type'] == null ) {
+         $data['type'] = 0;
+        }
         $query = "SELECT `id`,`head`,`image`,`send_add`,`title` FROM `news` WHERE `send_add` > 0 AND `typestudent` = ".$data['type']." OR `typestudent` = 4 ORDER BY `news`.`send_add` DESC LIMIT 10";
 //         echo $query;
         $reusult_test = mysqli_query($con,$query);
