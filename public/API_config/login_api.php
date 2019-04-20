@@ -20,8 +20,7 @@
         if( $result_2[0]==0){
             exit(json_encode(['state'=>0, 'msg'=>'erro']));
         }else{
-            $data_show = $data_show = 'SELECT students.*,documents.typestudent FROM `students` LEFT JOIN `documents` ON students.id = documents.student WHERE `stdId` = "'.$data['username'].'" AND `peopleId` = "'.$data['password'].'"';
-            $reusult_test = mysqli_query($con,$data_show);
+            $data_show = "select * from students left join documents on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password']."'";
             $result_show = mysqli_fetch_assoc($reusult_test);
 //             echo $data_show;
 
