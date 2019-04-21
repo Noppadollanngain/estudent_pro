@@ -20,10 +20,12 @@
         if( $result_2[0]==0){
             exit(json_encode(['state'=>0, 'msg'=>'erro']));
         }else{
-            $data_show = "select * from documents join students on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password'].'"';
-            echo $data_show;
-            // $reusult_test = mysqli_query($con,$data_show);
-            // $result_show = mysqli_fetch_assoc($reusult_test);
+            $data_show = "select * from documents join students on documents.student = students.id where  students.stdId = '".$data['username']."' and students.peopleId = '".$data['password']."'";
+            
+            $reusult_test = mysqli_query($con,$data_show);
+            $result_show = mysqli_fetch_assoc($reusult_test);
+
+            echo $result_show['loginstatus'];
 
             // if($result_show['loginstatus']){
             //     exit(json_encode(['state'=>0, 'msg'=>'login already']));
