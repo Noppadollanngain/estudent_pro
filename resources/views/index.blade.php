@@ -119,12 +119,7 @@
                     @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type1)
-                    {{number_format(($count_type1/$count_document)*100,2)}}
-                  @endif%" aria-valuenow="@if ($count_type1)
-                      {{number_format(($count_type1/$count_document)*100,2)}}
-                    @endif"
-                      aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type1){{number_format(($count_type1/$count_document)*100,2)}}@endif%" aria-valuenow="@if ($count_type1){{number_format(($count_type1/$count_document)*100,2)}}@endif"aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="wrapper mt-4">
@@ -135,12 +130,7 @@
                     @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type2)
-                    {{number_format(($count_type2/$count_document)*100,2)}}
-                  @endif %" aria-valuenow="@if ($count_type2)
-                      {{number_format(($count_type2/$count_document)*100,2)}}
-                    @endif "
-                      aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type2){{number_format(($count_type2/$count_document)*100,2)}}@endif%" aria-valuenow="@if ($count_type2){{number_format(($count_type2/$count_document)*100,2)}}@endif "aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="wrapper mt-4">
@@ -151,12 +141,7 @@
                     @endif </p>
                   </div>
                   <div class="progress">
-                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type3)
-                    {{number_format(($count_type3/$count_document)*100,2)}}
-                  @endif%" aria-valuenow="@if ($count_type3)
-                      {{number_format(($count_type3/$count_document)*100,2)}}
-                    @endif "
-                      aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($count_type3){{number_format(($count_type3/$count_document)*100,2)}}@endif%" aria-valuenow="@if ($count_type3){{number_format(($count_type3/$count_document)*100,2)}}@endif "aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
@@ -172,157 +157,82 @@
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                          <th>
-                            #
+                          <th style="font-size:1rem;font-family: 'Athiti', sans-serif;">
+                            ประเภท นศ
                           </th>
-                          <th>
-                            First name
+                          <th style="font-size:1rem;font-family: 'Athiti', sans-serif;">
+                            จำนวนทั้งหมด
                           </th>
-                          <th>
-                            Progress
+                          <th style="font-size:1rem;font-family: 'Athiti', sans-serif;">
+                            ส่งเอกสารแล้ว
                           </th>
-                          <th>
-                            Amount
+                          <th style="font-size:1rem;font-family: 'Athiti', sans-serif;">
+                            ขาดส่งเอกสาร
                           </th>
-                          <th>
-                            Sales
-                          </th>
-                          <th>
-                            Deadline
+                          <th class="w-50 text-center" style="font-size:1rem;font-family: 'Athiti', sans-serif;" colspan="2">
+                            คิดเป็น
                           </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="font-weight-medium">
-                            1
+                          <td style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="font-weight-medium">
+                            กู้ยืมรายใหม่
                           </td>
-                          <td>
-                            Herman Beck
+                          <td class="text-center">
+                            {{ !empty($count_type1) ? $count_type1 : 0 }}
                           </td>
-                          <td>
+                          <td class="text-center">
+                            {{ !empty($count_type1_success) ? $count_type1_success : 0 }}
+                          </td>
+                          <td class="text-center">
+                            {{ !empty($count_type1_success)&&!empty($count_type1) ? $count_type1-$count_type1_success : 0 }}
+                          </td>
+                          <td class="text-success">
+                            {{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}%
                             <div class="progress">
-                              <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td class="text-danger"> 53.64%
-                            <i class="mdi mdi-arrow-down"></i>
-                          </td>
-                          <td>
-                            May 15, 2015
                           </td>
                         </tr>
                         <tr>
-                          <td class="font-weight-medium">
-                            2
+                          <td style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="font-weight-medium">
+                            กู้ยืมรายใหม่เลื่อนชั้นปี
                           </td>
-                          <td>
-                            Messsy Adam
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $245.30
-                          </td>
-                          <td class="text-success"> 24.56%
-                            <i class="mdi mdi-arrow-up"></i>
-                          </td>
-                          <td>
-                            July 1, 2015
-                          </td>
+                          <td class="text-center">
+                              {{ !empty($count_type2) ? $count_type2 : 0 }}
+                            </td>
+                            <td class="text-center">
+                              {{ !empty($count_type2_success) ? $count_type2_success : 0 }}
+                            </td>
+                            <td class="text-center">
+                              {{ !empty($count_type2_success)&&!empty($count_type2) ? $count_type2-$count_type2_success : 0 }}
+                            </td>
+                            <td class="text-warning">
+                              {{ !empty($count_type2_success)&&!empty($count_type2) ? ($count_type2_success/$count_type2)*100 : 0 }}%
+                              <div class="progress">
+                                <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type2_success)&&!empty($count_type2) ? ($count_type2_success/$count_type2)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
                         </tr>
                         <tr>
-                          <td class="font-weight-medium">
-                            3
+                          <td style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="font-weight-medium">
+                            กู้ยืมรายเก่า
                           </td>
-                          <td>
-                            John Richards
+                          <td class="text-center">
+                            {{ !empty($count_type3) ? $count_type3 : 0 }}
                           </td>
-                          <td>
+                          <td class="text-center">
+                            {{ !empty($count_type3_success) ? $count_type3_success : 0 }}
+                          </td>
+                          <td class="text-center">
+                            {{ !empty($count_type3_success)&&!empty($count_type3) ? $count_type3-$count_type3_success : 0 }}
+                          </td>
+                          <td class="text-danger">
+                            {{ !empty($count_type3_success)&&!empty($count_type3) ? ($count_type3_success/$count_type3)*100 : 0 }}%
                             <div class="progress">
-                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                              <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type3_success)&&!empty($count_type3) ? ($count_type3_success/$count_type3)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                          </td>
-                          <td>
-                            $138.00
-                          </td>
-                          <td class="text-danger"> 28.76%
-                            <i class="mdi mdi-arrow-down"></i>
-                          </td>
-                          <td>
-                            Apr 12, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="font-weight-medium">
-                            4
-                          </td>
-                          <td>
-                            Peter Meggik
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td class="text-danger"> 53.45%
-                            <i class="mdi mdi-arrow-down"></i>
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="font-weight-medium">
-                            5
-                          </td>
-                          <td>
-                            Edward
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 160.25
-                          </td>
-                          <td class="text-success"> 18.32%
-                            <i class="mdi mdi-arrow-up"></i>
-                          </td>
-                          <td>
-                            May 03, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="font-weight-medium">
-                            6
-                          </td>
-                          <td>
-                            Henry Tom
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 150.00
-                          </td>
-                          <td class="text-danger"> 24.67%
-                            <i class="mdi mdi-arrow-down"></i>
-                          </td>
-                          <td>
-                            June 16, 2015
                           </td>
                         </tr>
                       </tbody>

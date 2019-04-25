@@ -32,6 +32,9 @@ class AdminController extends Controller
         $count_type1 = Documents::where('typestudent','=',1)->count();
         $count_type2 = Documents::where('typestudent','=',2)->count();
         $count_type3 = Documents::where('typestudent','=',3)->count();
+        $count_type1_success = Documents::where('typestudent','=',1)->where('confrim','!=',0)->count();
+        $count_type2_success = Documents::where('typestudent','=',2)->where('confrim','!=',0)->count();
+        $count_type3_success = Documents::where('typestudent','=',3)->where('confrim','!=',0)->count();
         return view('index',[
             'count_student' => $count_student,
             'count_document' => $count_document,
@@ -39,7 +42,10 @@ class AdminController extends Controller
             'count_error' => $count_error,
             'count_type1' => $count_type1,
             'count_type2' => $count_type2,
-            'count_type3' => $count_type3
+            'count_type3' => $count_type3,
+            'count_type1_success' => $count_type1_success,
+            'count_type2_success' => $count_type2_success,
+            'count_type3_success' => $count_type3_success
         ]);
     }
 
