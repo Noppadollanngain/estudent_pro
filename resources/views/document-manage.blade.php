@@ -33,9 +33,9 @@
                   <h4 class="card-title row">
                     <p style="font-size:1.25rem;font-family: 'Athiti', sans-serif;" class="col-4">จัดการข้อมูลเอกสาร </p>
                     @if ($data->confrim)
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-8 text-right"> <span style="color:green">ยืนยันข้อมูล โดย {{$data->getNameconfirm}} เวลายืนยัน {{$data->added_confrim}}</span> <a class="btn btn-outline-danger" style="font-size:1rem;font-family: 'Athiti', sans-serif;" href="{{route('document-edit-confrim',['id'=>$data->idDoc,'status'=>0])}}">ยกเลิกการยืนยัน</a></p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-8 text-right"> <span style="color:green">ยืนยันข้อมูล โดย {{$data->getNameconfirm}} เวลายืนยัน {{$data->added_confrim}}</span> <a class="btn btn-outline-danger" style="font-size:1rem;font-family: 'Athiti', sans-serif;" href="javascript:void(0)" onclick="confirm({{ $data->idDoc }},0)">ยกเลิกการยืนยัน</a></p>
                     @else
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-8 text-right"> <a class="btn btn-outline-success" style="font-size:1rem;font-family: 'Athiti', sans-serif;" href="{{route('document-edit-confrim',['id'=>$data->idDoc,'status'=>1])}}">ยืนยันการดำเนินการ</a></p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="col-8 text-right"> <a class="btn btn-outline-success" style="font-size:1rem;font-family: 'Athiti', sans-serif;" href="javascript:void(0)" onclick="confirm({{ $data->idDoc }},1)">ยืนยันการดำเนินการ</a></p>
                     @endif
                   </h4>
                   <table class="table table-hover" style="margin-bottom:25px;">
@@ -174,6 +174,39 @@
     </div> 
 @endsection
 @section('scripts')
+  <script>
+    function confirm(idDoc,status){
+      swal({
+        title: "ต้องการเปลี่ยนยืนยันสถานะ?",
+        text: "คุณต้องการเปลี่ยนสถานะการยืนยันสถานะจริงหรือไม่ !",
+        icon: "warning",
+        buttons: ['ยกเลิก','ตกลง'],
+        dangerMode: false,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("ยืนยันการเปลี่ยนแปลงสถานะ", {
+            icon: "success",
+            timer: 3000,
+            buttons: false,
+          }).then( res => {
+            
+            window.location.href='/document-edit-confrim?id='+idDoc+'&status='+status;
+          });
+        } else {
+          swal({
+            title: "ยกเลิกการเปลี่ยนสถานะ",
+            text: "ยกเลิกการเปลี่ยนสถานะแล้ว สถานะไม่มีการเปลี่ยนแปลง",
+            timer: 3000,
+            type: 'warning',
+            icon: "warning",
+            buttons: false,
+            showConfirmButton: false
+          });
+        }
+      });
+    }
+  </script>
   @if (session()->has('msg_success'))
   <script>
     swal({
