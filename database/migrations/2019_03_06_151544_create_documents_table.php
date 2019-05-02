@@ -27,10 +27,12 @@ class CreateDocumentsTable extends Migration
             $table->boolean('doc1')->default(0);
             $table->boolean('doc2')->default(0);
             $table->boolean('doc3')->default(0);
+            $table->boolean('doc4')->default(0);
             $table->boolean('confrim')->default(0);
             $table->timestamp('added_doc1')->nullable();
             $table->timestamp('added_doc2')->nullable();
             $table->timestamp('added_doc3')->nullable();
+            $table->timestamp('added_doc4')->nullable();
             $table->timestamp('added_confrim')->nullable();
             $table->integer('whoIsget1')->unsigned()->nullable();
             $table->foreign('whoIsget1')
@@ -42,6 +44,10 @@ class CreateDocumentsTable extends Migration
                 ->on('users');
             $table->integer('whoIsget3')->unsigned()->nullable();
             $table->foreign('whoIsget3')
+                ->references('id')
+                ->on('users');
+            $table->integer('whoIsget4')->unsigned()->nullable();
+            $table->foreign('whoIsget4')
                 ->references('id')
                 ->on('users');
             $table->integer('whoIsconfrim')->unsigned()->nullable();

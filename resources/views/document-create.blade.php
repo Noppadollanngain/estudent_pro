@@ -124,6 +124,23 @@
                            
                         </div>
                       </div>
+                      <div class="[ form-group ] row">
+                        <div class="col-4 offset-md-1">
+                           <input type="checkbox" value="1" name="doc4" id="fancy-checkbox-doc4" autocomplete="off"  />
+                           <div style="border-style: none;" class="[ btn-group ]" >
+                               <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-doc4" class="[ btn btn-primary ]">
+                                       <span class="fa fa-check"></span>
+                                       <span class="fa fa-times"> </span>
+                               </label>
+                               <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
+                                      รับเอกสารสัญญากู้ยืนคืน
+                               </label>
+                           </div>
+                       </div>
+                       <div class="col-6 offset-md-1">
+                          
+                       </div>
+                     </div>
                       <div class="row" style="margin-top:25px;">
                             <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
                             <a href="{{route('admin-searchdocument')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้าค้นหา</a>

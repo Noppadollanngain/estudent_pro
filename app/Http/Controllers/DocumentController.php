@@ -97,6 +97,17 @@ class DocumentController extends Controller
             $data->added_doc3 = null;
             $data->whoIsget3 = null;
         }
+        if($request->doc4){
+            if($request->doc4!=$data->doc4){
+                $data->doc4 = $request->doc4;
+                $data->added_doc4 = now();
+                $data->whoIsget4 = Auth::user()->id;
+            }
+        }else{
+            $data->doc4 = 0;
+            $data->added_doc4 = null;
+            $data->whoIsget4 = null;
+        }
         if($request->typestudent){
             $data->typestudent = $request->typestudent;
         } 
@@ -175,6 +186,11 @@ class DocumentController extends Controller
                 $data->doc3 = $request->doc3;
                 $data->added_doc3 = now();
                 $data->whoIsget3 = Auth::user()->id;
+            }
+            if($request->doc4){
+                $data->doc4 = $request->doc4;
+                $data->added_doc4 = now();
+                $data->whoIsget4 = Auth::user()->id;
             }
             if($this->CreateDocument($data)){
                 session()->flash('msg_success', 'บันทึกข้อมูลเสร็จสิ้น');

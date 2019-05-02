@@ -47,8 +47,9 @@ class Documents extends Model
             ->leftJoin('users as nameIsget1','nameIsget1.id','=','documents.whoIsget1')
             ->leftJoin('users as nameIsget2','nameIsget2.id','=','documents.whoIsget2')
             ->leftJoin('users as nameIsget3','nameIsget3.id','=','documents.whoIsget3')
+            ->leftJoin('users as nameIsget4','nameIsget4.id','=','documents.whoIsget4')
             ->leftJoin('users as confirm','confirm.id','=','documents.whoIsconfrim')
-            ->select('documents.id as idDoc','students.id as idStd','students.name','students.stdId','students.peopleId','documents.*','nameIsget1.name as getName1','nameIsget2.name as getName2','nameIsget3.name as getName3','confirm.name as getNameconfirm')
+            ->select('documents.id as idDoc','students.id as idStd','students.name','students.stdId','students.peopleId','documents.*','nameIsget1.name as getName1','nameIsget2.name as getName2','nameIsget3.name as getName3','nameIsget4.name as getName4','confirm.name as getNameconfirm')
             ->where('documents.student', '=' , $id);
         return $data;
     }
