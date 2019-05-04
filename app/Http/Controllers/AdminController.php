@@ -186,4 +186,33 @@ class AdminController extends Controller
         $this->block();
         return view('admin-searchdocument');
     }
+
+    public function adminInsertDocumentForm(Request $request){
+        if(Auth::user()->id==1){
+            if($request->hasFile('excel')){
+                $path = $request->file('excel')->getRealPath();
+                $data = Excel::load($path)->get();
+                foreach ($data as $value) {
+                    $data_get = Students::where('peopleId','=',$value->col1)->first();
+                    if(isset($data_get)){
+                        $data_set = Documents::firstOrNew(['estdId'=>$value->col2]);
+                        $data_set->student = $data_get->id;
+                        $data_set->estdId = $value->col2;
+                        $data_set->typestudent = $request->typestudent;
+                        $data_set->save();
+                    }
+                }
+                session()->flash('msg_success', 'เพิ่มข้อมูลเสร็จสิ้น');
+                return redirect()->route('home');
+            }
+            else{
+                session()->flash('msg_error', 'กรุณาเลือก ไฟล์ EXCEL');
+                return back();
+            }
+        }
+        else{
+            session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ ติดเจ้าหน้าที่สูงสุด');
+            return redirect()->route('home');
+        }
+    }
 }

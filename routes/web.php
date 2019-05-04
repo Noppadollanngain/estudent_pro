@@ -42,6 +42,7 @@ Route::get('/update-doc','AnyFunctionController@updateType')->name('any-update')
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');
+Route::post('/admin-insertdocument-form','AdminController@adminInsertDocumentForm')->name('admin-insertdocument-form');
 Route::post('/student-edit-form','StudentController@studentEditForm')->name('student-edit-form');
 Route::post('/document-edit-form','DocumentController@documentEditForm')->name('document-edit-form');
 Route::post('/document-create-form','DocumentController@documentCreateForm')->name('document-create-form');

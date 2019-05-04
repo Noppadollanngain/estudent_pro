@@ -189,7 +189,7 @@
                             {{ !empty($count_type1_success)&&!empty($count_type1) ? $count_type1-$count_type1_success : 0 }}
                           </td>
                           <td class="text-success">
-                            {{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}%
+                            {{ !empty($count_type1_success)&&!empty($count_type1) ? round(($count_type1_success/$count_type1)*100) : 0 }}%
                             <div class="progress">
                               <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
@@ -209,7 +209,7 @@
                               {{ !empty($count_type2_success)&&!empty($count_type2) ? $count_type2-$count_type2_success : 0 }}
                             </td>
                             <td class="text-warning">
-                              {{ !empty($count_type2_success)&&!empty($count_type2) ? ($count_type2_success/$count_type2)*100 : 0 }}%
+                              {{ !empty($count_type2_success)&&!empty($count_type2) ? round(($count_type2_success/$count_type2)*100) : 0 }}%
                               <div class="progress">
                                 <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type2_success)&&!empty($count_type2) ? ($count_type2_success/$count_type2)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
@@ -229,7 +229,7 @@
                             {{ !empty($count_type3_success)&&!empty($count_type3) ? $count_type3-$count_type3_success : 0 }}
                           </td>
                           <td class="text-danger">
-                            {{ !empty($count_type3_success)&&!empty($count_type3) ? ($count_type3_success/$count_type3)*100 : 0 }}%
+                            {{ !empty($count_type3_success)&&!empty($count_type3) ? round(($count_type3_success/$count_type3)*100) : 0 }}%
                             <div class="progress">
                               <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: {{ !empty($count_type3_success)&&!empty($count_type3) ? ($count_type3_success/$count_type3)*100 : 0 }}%" aria-valuenow="{{ !empty($count_type1_success)&&!empty($count_type1) ? ($count_type1_success/$count_type1)*100 : 0 }}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
