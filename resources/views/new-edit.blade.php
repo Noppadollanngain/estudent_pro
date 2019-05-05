@@ -89,16 +89,10 @@
                 @if ($data->whoupdate)
                   <p style="font-size:1rem;color:green">แก้ไขล่าสุดโดย {{$data->whoupdate}} เวลา {{$data->updated_at}}</p>
                 @endif
-                @if ($data->whosend)
-                <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="reset" class="btn btn-success mr-2 disabled">บันทึกข้อมูล</button>
-                @else
-                  <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
-                @endif 
+                <button style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="submit" class="btn btn-success mr-2">บันทึกข้อมูล</button>
                 
                 <a href="{{route('new-list')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้ารายการ</a>
-                <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info  @if ($data->whosend)
-                    disabled
-                  @endif ">แจ้งข่าวสาร</a>
+                <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info">แจ้งข่าวสาร</a>
               {{Form::close()}}
             </div>
           </div>
