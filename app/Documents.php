@@ -8,7 +8,7 @@ use DB;
 class Documents extends Model
 {
     protected $table = "documents";
-
+    protected $fillable = ['estdId'];
     public static function searchByName($name){
         $data = DB::table('students')
                  ->leftJoin('documents','documents.student', '=', 'students.id')
