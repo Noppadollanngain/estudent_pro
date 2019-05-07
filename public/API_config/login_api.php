@@ -6,8 +6,8 @@
     file_put_contents('log/logs', $request_body.PHP_EOL, FILE_APPEND);
     $data = json_decode($request_body,true);
     
-    $data['username'] = '61543303033-0';
-    $data['password'] = '1101801081368';
+    // $data['username'] = '61543303033-0';
+    // $data['password'] = '1101801081368';
      
     $query_1 = "SELECT COUNT(`stdId`) FROM `students` WHERE `stdId` = '".$data['username']."'";
     $result_1 = mysqli_fetch_array(mysqli_query($con,$query_1));

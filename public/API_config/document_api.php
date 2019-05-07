@@ -8,7 +8,7 @@
     if(empty($data['id'])){
         exit(json_encode(['msg'=> 'miss']));
     }else{
-        $query = "SELECT `doc1`, `doc2`, `doc3`, `confrim` FROM `documents` WHERE `student` = ".$data['id'];
+        $query = "SELECT `doc1`, `doc2`, `doc3`, `doc4`, `confrim` FROM `documents` WHERE `student` = ".$data['id'];
         $reusult_test = mysqli_query($con,$query);
         $result_show = mysqli_fetch_assoc($reusult_test);
         exit(json_encode($result_show));
