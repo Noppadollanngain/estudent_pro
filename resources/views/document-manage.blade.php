@@ -102,7 +102,7 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                        แบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
+                                  ส่งเเบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพิ่มการศึกษา
                                 </label>
                             </div>
                          </div>
@@ -125,7 +125,7 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                        ยืนยันแบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
+                                  ลงชื่อยืนยันเเบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
                                 </label>
                             </div>
                         </div>

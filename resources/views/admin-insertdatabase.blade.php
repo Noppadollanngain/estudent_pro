@@ -8,7 +8,7 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มข้อมูล</h4>
+                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายชื่อนักศึกษาเข้าระบบ</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   เพิ่มข้อมูล นัศศึกษากู้ยืมกองทุนเพื่อการศึกษา
                 </p>
@@ -26,12 +26,12 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มข้อมูล รายเก่า</h4>
+                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายใหม่เลื่อนชั้นปี</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   หมายเลขสัญญากู้ยืมของนักศึกษากองทุนกู้ยืม
                 </p>
                 {!! Form::open(array('route'=>'admin-insertdocument-form','files' => true)) !!}
-                  <input type="hidden" name="typestudent" value="3">
+                  <input type="hidden" name="typestudent" value="2">
                   <div class="form-group">
                     <label style="font-size:1rem;font-family: 'Athiti', sans-serif;">File upload</label><br>
                     <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="file" name="excel" accept=".xlsx">
@@ -45,12 +45,12 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มข้อมูล รายใหม่เลื่อนชั้นปี</h4>
+                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายเก่า</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   หมายเลขสัญญากู้ยืมของนักศึกษากองทุนกู้ยืม
                 </p>
                 {!! Form::open(array('route'=>'admin-insertdocument-form','files' => true)) !!}
-                  <input type="hidden" name="typestudent" value="2">
+                  <input type="hidden" name="typestudent" value="3">
                   <div class="form-group">
                     <label style="font-size:1rem;font-family: 'Athiti', sans-serif;">File upload</label><br>
                     <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" type="file" name="excel" accept=".xlsx">
