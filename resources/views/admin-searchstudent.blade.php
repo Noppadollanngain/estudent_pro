@@ -18,7 +18,7 @@
                   {!! Form::open(array('route'=>'student-searchBy','method' => 'get')) !!}
                     <div class="input-group">
                         <input type="hidden" name="typesearch" value="1">
-                        <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="data" type="text" class="form-control" placeholder="รายชื่อนักศึกษา" aria-label="Username" aria-describedby="colored-addon3" minlength="3" required>
+                        <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="data" type="text" class="form-control" placeholder="รายชื่อนักศึกษา" aria-label="Username" aria-describedby="colored-addon3" required>
                         <div class="input-group-append bg-primary border-primary">
                         <button type="submit" class="input-group-text bg-transparent">
                             <i style="color:#FFF" class="fa fa-search"></i>
@@ -32,7 +32,7 @@
                     {!! Form::open(array('route'=>'student-searchBy','method' => 'get')) !!}
                         <div class="input-group">
                             <input type="hidden" name="typesearch" value="2">
-                            <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" minlength="3" name="data" type="text" class="form-control" placeholder="รหัสนักศึกษา" aria-label="Username" aria-describedby="colored-addon3" required>
+                            <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="data" type="text" class="form-control" placeholder="รหัสนักศึกษา" aria-label="Username" aria-describedby="colored-addon3" required>
                             <div class="input-group-append bg-primary border-primary">
                               <button type="submit" class="input-group-text bg-transparent">
                                   <i style="color:#FFF" class="fa fa-search"></i>
@@ -46,7 +46,7 @@
                     {!! Form::open(array('route'=>'student-searchBy','method' => 'get')) !!}
                         <div class="input-group">
                             <input type="hidden" name="typesearch" value="3">
-                            <input minlength="3" style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="data" type="text" class="form-control" placeholder="รหัสบัตรประชาชน" aria-label="Username" aria-describedby="colored-addon3" required>
+                            <input style="font-size:1rem;font-family: 'Athiti', sans-serif;" name="data" type="text" class="form-control" placeholder="รหัสบัตรประชาชน" aria-label="Username" aria-describedby="colored-addon3" required>
                             <div class="input-group-append bg-primary border-primary">
                                 <button type="submit" class="input-group-text bg-transparent">
                                     <i style="color:#FFF" class="fa fa-search"></i>

@@ -23,31 +23,37 @@ class StudentController extends Controller
 
     public function searchBy(Request $request){
         $this->block();
-        if((!empty($request->data))||(!empty($request->typesearch))){
-            if($request->typesearch==1){
-                $data = Students::SearchByName($request->data)->paginate(10);
-                $data->appends(array(
-                    'typesearch' => $request->typesearch,
-                    'data' => $request->data
-                ));
-            }elseif($request->typesearch==2){
-                $data = Students::SearchBystdId($request->data)->paginate(10);
-                $data->appends(array(
-                    'typesearch' => $request->typesearch,
-                    'data' => $request->data
-                ));
-            }elseif($request->typesearch==3){
-                $data = Students::SearchBypeopleId($request->data)->paginate(10);
-                $data->appends(array(
-                    'typesearch' => $request->typesearch,
-                    'data' => $request->data
-                ));
+        if(strlen($request->data)>2){
+            if((!empty($request->data))||(!empty($request->typesearch))){
+                if($request->typesearch==1){
+                    $data = Students::SearchByName($request->data)->paginate(10);
+                    $data->appends(array(
+                        'typesearch' => $request->typesearch,
+                        'data' => $request->data
+                    ));
+                }elseif($request->typesearch==2){
+                    $data = Students::SearchBystdId($request->data)->paginate(10);
+                    $data->appends(array(
+                        'typesearch' => $request->typesearch,
+                        'data' => $request->data
+                    ));
+                }elseif($request->typesearch==3){
+                    $data = Students::SearchBypeopleId($request->data)->paginate(10);
+                    $data->appends(array(
+                        'typesearch' => $request->typesearch,
+                        'data' => $request->data
+                    ));
+                }
+                
+                return view('student-list')->withData($data);
             }
-            
-            return view('student-list')->withData($data);
+            session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ กรุณาลองอีกครั้ง');
+            return back();
         }
-        session()->flash('msg_error', 'ไม่สามารถดำเนินการได้ กรุณาลองอีกครั้ง');
-        return back();
+        else{
+            session()->flash('msg_error', 'ระบุคำค้นหาอย่างน้อย 3 คำ');
+            return view('admin-searchstudent');
+        }
   }
 
   public function studentEdit(Request $request){

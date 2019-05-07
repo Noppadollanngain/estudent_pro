@@ -23,7 +23,7 @@ class DocumentController extends Controller
     }
     public function searchBy(Request $request){
         $this->block();
-        if($request->typesearch==1){
+        if(strlen($request->data)>2){if($request->typesearch==1){
             $data = Documents::searchByName($request->data)->paginate(10);
             $data->appends(array(
                 'typesearch' => $request->typesearch,
@@ -48,7 +48,11 @@ class DocumentController extends Controller
                 'data' => $request->data
             ));
         }
-        return view('document-list')->withData($data);
+        return view('document-list')->withData($data);}
+        else{
+            session()->flash('msg_error', 'ระบุคำค้นหาอย่างน้อย 3 คำ');
+            return view('admin-searchdocument');
+        }
     }
 
     public function documentEdit(Request $request){
