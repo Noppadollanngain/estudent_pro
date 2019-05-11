@@ -152,7 +152,9 @@ class AdminController extends Controller
                     }
                     if(!empty($arr)){
                         foreach ($arr as $key => $value) {
-                           $this->firstOrNewDatabase($value['name'],$value['stdId'],$value['peopleId'],$value['major']);
+                            if(isset($value['name'])){
+                                $this->firstOrNewDatabase($value['name'],$value['stdId'],$value['peopleId'],$value['major']);
+                            }
                         }
                         session()->flash('msg_success', 'เพิ่มข้อมูลเสร็จสิ้น');
                         return redirect()->route('home');

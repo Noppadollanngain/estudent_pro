@@ -93,6 +93,7 @@
                 
                 <a href="{{route('new-list')}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-warning">กลับหน้ารายการ</a>
                 <a href="{{route('new-send',[ 'id' => $data->id])}}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-info">แจ้งข่าวสาร</a>
+                <a href="javascript:void(0)" onclick="deleteNew({{ $data->id }})" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-danger">ลบข่าว</a>
               {{Form::close()}}
             </div>
           </div>
@@ -130,6 +131,36 @@
   <script>
     function gotoEdit(id){
       window.location.href = '{{asset("/student-edit")}}/'+id;
+    }
+    function deleteNew(id){
+      swal({
+        title: "ต้องการเปลี่ยนยืนยันสถานะ?",
+        text: "คุณต้องการลบข่าวสารนี้จริงหรือไม่ !",
+        icon: "warning",
+        buttons: ['ยกเลิก','ตกลง'],
+        dangerMode: false,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("ยืนยันการการลบข้อมูล", {
+            icon: "success",
+            timer: 3000,
+            buttons: false,
+          }).then( res => {
+            window.location.href='/delete-news?id='+id;
+          });
+        } else {
+          swal({
+            title: "ยกเลิกการลบข้อมูล",
+            text: "ยกเลิกการลบข่าวสารแล้ว",
+            timer: 3000,
+            type: 'warning',
+            icon: "warning",
+            buttons: false,
+            showConfirmButton: false
+          });
+        }
+      });
     }
   </script>
 @endsection

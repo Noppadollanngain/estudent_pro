@@ -39,6 +39,7 @@ Route::get('/any-function','AnyFunctionController@index')->name('any');
 Route::get('/alert-doc','AnyFunctionController@alert_doc')->name('any-alertdoc');
 Route::get('/reset-doc','AnyFunctionController@resetDoc')->name('any-reset');
 Route::get('/update-doc','AnyFunctionController@updateType')->name('any-update');
+Route::get('/delete-news','NewsController@deleteNews')->name('delete-new');
 
 Route::post('/admin-edit-form','AdminController@adminEditForm')->name('admin-edit-form');
 Route::post('/admin-insertdatabase-form','AdminController@adminInsertdatabaseForm')->name('admin-insertdatabase-form');

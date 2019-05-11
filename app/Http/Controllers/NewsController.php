@@ -189,4 +189,12 @@ class NewsController extends Controller
         }
         
     }
+    public function deleteNews(Request $request){
+        News::find($request->id)->delete();
+        session()->flash('msg_success', 'ดำเนินการเสร็จสิ้น');
+        $data = News::listselectNews()->paginate(20);
+        return view('news-list',[
+            'data' => $data
+        ]);
+    }
 }
