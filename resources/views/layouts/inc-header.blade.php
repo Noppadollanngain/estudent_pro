@@ -30,7 +30,7 @@
                   </div>
                 </a>
               <a href="{{route('admin-edit',['id'=>Auth::user()->id])}}" class="dropdown-item mt-2">
-                  จัดการบัชชี
+                  จัดการบัญชี
                 </a>
                 <a href="{{route('admin-insertdatabase')}}" class="dropdown-item">
                   เพิ่มฐานข้อมูล

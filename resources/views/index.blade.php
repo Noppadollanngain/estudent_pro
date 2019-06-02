@@ -124,7 +124,7 @@
                 </div>
                 <div class="wrapper mt-4">
                   <div class="d-flex justify-content-between">
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายใหม่เลื่อนชั้นปี จำนวน {{number_format($count_type2)}}</p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายเก่าเลื่อนชั้นปี จำนวน {{number_format($count_type2)}}</p>
                     <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">@if ($count_type2)
                       {{number_format(($count_type2/$count_document)*100,2)}}%
                     @endif </p>

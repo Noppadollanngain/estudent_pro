@@ -30,7 +30,7 @@
           <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-text">กดปุ่มเพื่อทำการรีเซทระบบเอกสารใหม่</p>
         </div>
         <div class="card-body">
-          <h4 style="font-size:1.05rem;font-family: 'Athiti', sans-serif;" class="card-title">เลื่อนระดับชั้นนักศึกษากู้ยอืม</h4>
+          <h4 style="font-size:1.05rem;font-family: 'Athiti', sans-serif;" class="card-title">เลื่อนระดับชั้นนักศึกษากู้ยืม</h4>
           <a id="updateDoc" href="{{ route('any-update') }}" style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="btn btn-success mb-2 disabled">เลื่อนชั้นนักศึกษา</a> 
           <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-text">กดปุ่มเพื่อทำการเลื่อนชั้นนักศึกษากู้ยืม</p>
         </div>
