@@ -99,7 +99,7 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                  ลงชื่อยืนยันเเบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
+                                  ส่งสัญญากู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
                                 </label>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                        ยืนยันค่าเล่าเรียน
+                                        ลงชื่อในใบยืนยันค่าเล่าเรียน/ค่าครองชีพ
                                 </label>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                        <span class="fa fa-times"> </span>
                                </label>
                                <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                      รับเอกสารสัญญากู้ยืนคืน
+                                      รับเอกสารสัญญา+ใบยืนยันกู้ยืนคืน
                                </label>
                            </div>
                        </div>
