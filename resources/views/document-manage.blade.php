@@ -109,7 +109,7 @@
                          <div class="col-6 offset-md-1">
                          <p style="font-size:1rem;font-family: 'Athiti', sans-serif;color:green;">
                             @if ($data->doc1)
-                                รับเอกสารโดบ {{$data->getName1}} เวลา {{$data->added_doc1}}
+                                รับเอกสารโดย {{$data->getName1}} เวลา {{$data->added_doc1}}
                             @endif
                          </p>
                          </div>
@@ -125,14 +125,14 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                  ลงชื่อยืนยันเเบบคำขอกู้ยืมเงินกองทุนกู้ยืมเพื่อการศึกษา
+                                  ส่งสัญญากู้ยืมเงินกองทุนกู้ยืมเพิ่มการศึกษา
                                 </label>
                             </div>
                         </div>
                         <div class="col-6 offset-md-1">
                            <p style="font-size:1rem;font-family: 'Athiti', sans-serif;color:green;">
                                 @if ($data->doc2)
-                                    รับเอกสารโดบ {{$data->getName2}} เวลา {{$data->added_doc2}}
+                                    รับเอกสารโดย {{$data->getName2}} เวลา {{$data->added_doc2}}
                                 @endif
                             </p>
                         </div>
@@ -148,14 +148,14 @@
                                         <span class="fa fa-times"> </span>
                                 </label>
                                 <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                        ยืนยันค่าเล่าเรียน
+                                     ลงชื่อในใบยืนยันค่าเล่าเรียน/ค่าครองชีพ
                                 </label>
                             </div>
                         </div>
                         <div class="col-6 offset-md-1">
                            <p style="font-size:1rem;font-family: 'Athiti', sans-serif;color:green;">
                                 @if ($data->doc3)
-                                    รับเอกสารโดบ {{$data->getName3}} เวลา {{$data->added_doc3}}
+                                    รับเอกสารโดย {{$data->getName3}} เวลา {{$data->added_doc3}}
                                 @endif
                            </p>
                         </div>
@@ -171,14 +171,14 @@
                                        <span class="fa fa-times"> </span>
                                </label>
                                <label style="font-size:1rem;font-family: 'Athiti', sans-serif;" for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                                  รับเอกสารสัญญากู้ยืนคืน
+                                  รับเอกสารสัญญา+ใบยืนยันกู้ยืนคืน
                                </label>
                            </div>
                        </div>
                        <div class="col-6 offset-md-1">
                           <p style="font-size:1rem;font-family: 'Athiti', sans-serif;color:green;">
                                @if ($data->doc4)
-                                   รับเอกสารโดบ {{$data->getName4}} เวลา {{$data->added_doc4}}
+                                   รับเอกสารโดย {{$data->getName4}} เวลา {{$data->added_doc4}}
                                @endif
                           </p>
                        </div>
