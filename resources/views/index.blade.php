@@ -12,14 +12,14 @@
                     <i class="mdi mdi-cube text-danger icon-lg"></i>
                   </div>
                   <div class="float-right">
-                    <p style="font-size:1rem;" class="mb-0 text-right">จำนวนนักศึกษาในระบบ</p>
+                    <p style="font-size:1rem;" class="mb-0 text-right">นศ. ในระบบกองทุน</p>
                     <div class="fluid-container">
                     <h3 class="font-weight-medium text-right mb-0">{{number_format($count_student)}}</h3>
                     </div>
                   </div>
                 </div>
                 <p class="text-muted mt-3 mb-0">
-                  <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> จำนวนทั้งหมด
+                  <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i>จำนวนต่อคน
                 </p>
               </div>
             </div>
@@ -32,14 +32,14 @@
                     <i class="mdi mdi-receipt text-warning icon-lg"></i>
                   </div>
                   <div class="float-right">
-                    <p style="font-size:1rem;" class="mb-0 text-right">จำนวนเอกสารในระบบ</p>
+                    <p style="font-size:1rem;" class="mb-0 text-right">นศ. ที่มีเอกสารในระบบ</p>
                     <div class="fluid-container">
                       <h3 class="font-weight-medium text-right mb-0">{{number_format($count_document)}}</h3>
                     </div>
                   </div>
                 </div>
                 <p class="text-muted mt-3 mb-0">
-                  <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> เคยรับเอกสาร
+                  <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>จำนวนต่อคน
                 </p>
               </div>
             </div>
@@ -52,14 +52,14 @@
                     <i class="mdi mdi-poll-box text-success icon-lg"></i>
                   </div>
                   <div class="float-right">
-                    <p style="font-size:1rem;" class="mb-0 text-right">จำนวนส่งเอกสารครบ</p>
+                    <p style="font-size:1rem;" class="mb-0 text-right">นศ. ที่ส่งเอกสารครบ</p>
                     <div class="fluid-container">
                       <h3 class="font-weight-medium text-right mb-0">{{number_format($count_success)}}</h3>
                     </div>
                   </div>
                 </div>
                 <p class="text-muted mt-3 mb-0">
-                  <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> จากจำนวนเอกสาร
+                  <i class="mdi mdi-calendar mr-1" aria-hidden="true"></i>จำนวนต่อคน
                 </p>
               </div>
             </div>
@@ -72,14 +72,14 @@
                     <i class="mdi mdi-account-location text-info icon-lg"></i>
                   </div>
                   <div class="float-right">
-                    <p style="font-size:1rem;" class="mb-0 text-right">ขาดส่งเอกสาร</p>
+                    <p style="font-size:1rem;" class="mb-0 text-right">นศ. ที่ขาดส่งเอกสาร</p>
                     <div class="fluid-container">
                       <h3 class="font-weight-medium text-right mb-0">{{number_format($count_error)}}</h3>
                     </div>
                   </div>
                 </div>
                 <p class="text-muted mt-3 mb-0">
-                  <i class="mdi mdi-reload mr-1" aria-hidden="true"></i> จากจำนวนเอกสาร
+                  <i class="mdi mdi-reload mr-1" aria-hidden="true"></i>จำนวนต่อคน
                 </p>
               </div>
             </div>

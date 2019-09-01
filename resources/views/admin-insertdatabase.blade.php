@@ -10,7 +10,8 @@
               <div class="card-body">
                 <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายชื่อนักศึกษาเข้าระบบ</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
-                  เพิ่มข้อมูล นัศศึกษากู้ยืมกองทุนเพื่อการศึกษา
+                  เพิ่มข้อมูล นักศึกษากู้ยืมกองทุนเพื่อการศึกษา
+                  <a href="{{ asset('/file/ตัวอย่างข้อมูลนักศึกษา.xlsx') }}">ตัวอย่างไฟล์</a>
                 </p>
                 {!! Form::open(array('route'=>'admin-insertdatabase-form','files' => true)) !!}
                   <div class="form-group">
@@ -29,6 +30,7 @@
                 <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายใหม่เลื่อนชั้นปี</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   หมายเลขสัญญากู้ยืมของนักศึกษากองทุนกู้ยืม
+                  <a href="{{ asset('/file/ตัวอย่างข้อมูลเลขที่สัญญา.xlsx') }}">ตัวอย่างไฟล์</a>
                 </p>
                 {!! Form::open(array('route'=>'admin-insertdocument-form','files' => true)) !!}
                   <input type="hidden" name="typestudent" value="2">
@@ -48,6 +50,7 @@
                 <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายเก่า</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   หมายเลขสัญญากู้ยืมของนักศึกษากองทุนกู้ยืม
+                  <a href="{{ asset('/file/ตัวอย่างข้อมูลเลขที่สัญญา.xlsx') }}">ตัวอย่างไฟล์</a>
                 </p>
                 {!! Form::open(array('route'=>'admin-insertdocument-form','files' => true)) !!}
                   <input type="hidden" name="typestudent" value="3">

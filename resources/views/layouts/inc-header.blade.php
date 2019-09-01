@@ -29,10 +29,21 @@
                     </div>
                   </div>
                 </a>
-              <a href="{{route('admin-edit',['id'=>Auth::user()->id])}}" class="dropdown-item mt-2">
+              <a 
+                href="{{route('admin-edit',['id'=>Auth::user()->id])}}" 
+                @if (Auth::user()->id == 1)
+                  style="display: none !important;" 
+                @endif
+                class="dropdown-item mt-2">
                   จัดการบัญชี
                 </a>
-                <a href="{{route('admin-insertdatabase')}}" class="dropdown-item">
+                <a 
+                  href="{{route('admin-insertdatabase')}}" 
+                  class="dropdown-item"
+                  @if (Auth::user()->id != 1)
+                    style="display: none !important;" 
+                  @endif
+                >
                   เพิ่มฐานข้อมูล
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

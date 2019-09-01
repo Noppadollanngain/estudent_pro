@@ -34,7 +34,15 @@
                   <a style="font-size:1rem;" class="nav-link" href="{{route('admin-list')}}">รายการเจ้าหน้าที่</a>
                 </li>
                 <li class="nav-item">
-                  <a style="font-size:1rem;" class="nav-link" href="{{route('register')}}">เพิ่มเจ้าหน้าที่</a>
+                  <a 
+                    @if (Auth::user()->id != 1)
+                      style="display: none !important;" 
+                    @else
+                      style="font-size:1rem;" 
+                    @endif
+                    class="nav-link" 
+                    href="{{route('register')}}"
+                  >เพิ่มเจ้าหน้าที่</a>
                 </li>
               </ul>
             </div>
