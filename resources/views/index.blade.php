@@ -135,7 +135,7 @@
                 </div>
                 <div class="wrapper mt-4">
                   <div class="d-flex justify-content-between">
-                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายเก่า จำนวน {{number_format($count_type3)}}</p>
+                    <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2">รายเก่าชั้นปี 1 จำนวน {{number_format($count_type3)}}</p>
                     <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="mb-2 text-success">@if ($count_type3)
                       {{number_format(($count_type3/$count_document)*100,2)}}%
                     @endif </p>
@@ -217,7 +217,7 @@
                         </tr>
                         <tr>
                           <td style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="font-weight-medium">
-                            กู้ยืมรายเก่า
+                            กู้ยืมรายเก่าชั้นปี 1
                           </td>
                           <td class="text-center">
                             {{ !empty($count_type3) ? $count_type3 : 0 }}
