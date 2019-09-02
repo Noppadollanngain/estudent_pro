@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/link/download-app', function() {
+    return view('download');
+});
 Route::get('/home', 'AdminController@indexDashborad')->name('home');
 Route::get('/admin-list','AdminController@adminList')->name('admin-list');
 Route::get('/admin-block','AdminController@adminBlock')->name('admin-block');
