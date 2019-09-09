@@ -20,11 +20,11 @@
             exit(json_encode($result_show));
         }else { 
             $arr = [
-                'doc1' => null,
-                'doc2' => null,
-                'doc3' => null,
-                'doc4' => null,
-                'confrim' => null,
+                'doc1' => 2,
+                'doc2' => 2,
+                'doc3' => 2,
+                'doc4' => 2,
+                'confrim' => 2,
             ];
             exit(json_encode($arr));
         }
