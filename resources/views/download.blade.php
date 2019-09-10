@@ -12,7 +12,7 @@
       <img src="{{ asset('/file/RMUTL_STL_APP.png') }}" alt="QRcode">
     </div>
     <div>
-      <a href="bit.ly/rmutl-stl-app-download">
+      <a href="http://bit.ly/rmutl-stl-app-download">
         <img style="width: 25%;" src="{{ asset('/file/get-it-on-gplay-beta.png') }}" alt="download">
       </a>
     </div>
