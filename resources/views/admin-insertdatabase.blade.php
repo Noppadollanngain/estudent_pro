@@ -27,7 +27,7 @@
           <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายใหม่เลื่อนชั้นปี</h4>
+                <h4 class="card-title" style="font-size:1.25rem;font-family: 'Athiti', sans-serif;">เพิ่มรายการเอกสารรายเก่าเลื่อนชั้นปี</h4>
                 <p style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="card-description">
                   หมายเลขสัญญากู้ยืมของนักศึกษากองทุนกู้ยืม
                   <a href="{{ asset('/file/ตัวอย่างข้อมูลเลขที่สัญญา.xlsx') }}">ตัวอย่างไฟล์</a>
