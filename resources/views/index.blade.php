@@ -197,7 +197,7 @@
                         </tr>
                         <tr>
                           <td style="font-size:1rem;font-family: 'Athiti', sans-serif;" class="font-weight-medium">
-                            กู้ยืมรายใหม่เลื่อนชั้นปี
+                            กู้ยืมรายเก่าเลื่อนชั้นปี
                           </td>
                           <td class="text-center">
                               {{ !empty($count_type2) ? $count_type2 : 0 }}
