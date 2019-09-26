@@ -14,6 +14,24 @@
                   ระบุคำที่ต้องการค้นหา
                 </p>
                 <div class="form-group">
+                  <label style="font-size:1rem;font-family: 'Athiti', sans-serif;">ค้นหาจากประเภทนักศึกษา</label>
+                  {!! Form::open(array('route'=>'document-searchBy','method' => 'get')) !!}
+                    <div class="input-group">
+                        <input type="hidden" name="typesearch" value="5">
+                        <select class="form-control" name="data">
+                          <option value="1">กู้ยืมรายใหม่</option>
+                          <option value="2">กู้ยืมรายเก่าเลื่อนชั้นปี</option>
+                          <option value="3">กู้ยืมรายเก่า</option>
+                        </select>
+                        <div class="input-group-append bg-primary border-primary">
+                        <button type="submit" class="input-group-text bg-transparent">
+                            <i style="color:#FFF" class="fa fa-search"></i>
+                        </button>
+                        </div>
+                    </div>
+                  {!! Form::close() !!}
+                </div>
+                <div class="form-group">
                   <label style="font-size:1rem;font-family: 'Athiti', sans-serif;">ค้นหาจากชื่อนักศึกษา</label>
                   {!! Form::open(array('route'=>'document-searchBy','method' => 'get')) !!}
                     <div class="input-group">

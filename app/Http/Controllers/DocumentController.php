@@ -23,32 +23,41 @@ class DocumentController extends Controller
     }
     public function searchBy(Request $request){
         $this->block();
-        if(strlen($request->data)>2){if($request->typesearch==1){
-            $data = Documents::searchByName($request->data)->paginate(10);
-            $data->appends(array(
-                'typesearch' => $request->typesearch,
-                'data' => $request->data
-            ));
-        }elseif($request->typesearch==2){
-            $data = Documents::searchBystdId($request->data)->paginate(10);
-            $data->appends(array(
-                'typesearch' => $request->typesearch,
-                'data' => $request->data
-            ));
-        }elseif($request->typesearch==3){
-            $data = Documents::searchBypeopleId($request->data)->paginate(10);
-            $data->appends(array(
-                'typesearch' => $request->typesearch,
-                'data' => $request->data
-            ));
-        }elseif($request->typesearch==4){
-            $data = Documents::searchByestdId($request->data)->paginate(10);
-            $data->appends(array(
-                'typesearch' => $request->typesearch,
-                'data' => $request->data
-            ));
+        if(strlen($request->data)>2||$request->typesearch==5){
+            if($request->typesearch==1){
+                $data = Documents::searchByName($request->data)->paginate(10);
+                $data->appends(array(
+                    'typesearch' => $request->typesearch,
+                    'data' => $request->data
+                ));
+            }elseif($request->typesearch==2){
+                $data = Documents::searchBystdId($request->data)->paginate(10);
+                $data->appends(array(
+                    'typesearch' => $request->typesearch,
+                    'data' => $request->data
+                ));
+            }elseif($request->typesearch==3){
+                $data = Documents::searchBypeopleId($request->data)->paginate(10);
+                $data->appends(array(
+                    'typesearch' => $request->typesearch,
+                    'data' => $request->data
+                ));
+            }elseif($request->typesearch==4){
+                $data = Documents::searchByestdId($request->data)->paginate(10);
+                $data->appends(array(
+                    'typesearch' => $request->typesearch,
+                    'data' => $request->data
+                ));
+            }elseif($request->typesearch==5){
+                $data = Documents::searchByType($request->data)->paginate(10);
+                $data->appends(array(
+                    'typesearch' => $request->typesearch,
+                    'data' => $request->data
+                ));
+                // return "1";
+            }
+            return view('document-list')->withData($data);
         }
-        return view('document-list')->withData($data);}
         else{
             session()->flash('msg_error', 'ระบุคำค้นหาอย่างน้อย 3 คำ');
             return view('admin-searchdocument');

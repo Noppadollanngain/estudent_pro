@@ -41,6 +41,14 @@ class Documents extends Model
         return $data;
     }
 
+    public static function searchByType($key) {
+        $data = DB::table('students')
+                 ->leftJoin('documents','documents.student', '=', 'students.id')
+                 ->where('documents.typestudent',$key)
+                 ->select('students.id','students.name','documents.id as docStatus','documents.confrim','students.stdId','students.peopleId');
+        return $data;
+    }
+
     public static function oneDocument($id){
         $data = DB::table('students')
             ->leftJoin('documents','documents.student', '=', 'students.id')
